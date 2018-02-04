@@ -1,0 +1,15 @@
+{
+  "name": "qoordinator",
+  "version": "0.0.1",
+  "description": "Server for Qoordinator web app to anonymously coordinate email groups.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valentine Logencia",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.1"
+  }
+}
