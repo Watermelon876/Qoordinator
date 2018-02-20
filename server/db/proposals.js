@@ -1,11 +1,9 @@
-const Proposals = require('../api/models/proposals');
-
-//TODO: Protect against sql injection!
+const Proposal = require('../api/models/proposal').Proposal;
 
 /**
  * Checks whether proposalId exists in database.
  */
-function checkProposalExists(proposalId, callback) {
+function checkProposalExists(proposalNumber, proposalTitle, callback) {
     
 }
 
@@ -16,7 +14,10 @@ function checkProposalExists(proposalId, callback) {
  * @param{idCallback}
  */
 function addProposal(proposalData, idCallback) {
-    
+    Proposal.create(proposalData)
+    .then(proposalRecord => {
+        idCallback(null, proposalRecord.id);
+    });
 }
 
 /**
